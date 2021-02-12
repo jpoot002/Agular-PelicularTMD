@@ -1,0 +1,18 @@
+<div class="swiper-container">
+  <div class="swiper-wrapper">
+
+      <div *ngFor="let actor of PeliculaCastSlideMultiples"
+           class="swiper-slide text-white text-center SlideCss"  >
+
+          <img [src]="actor.profile_path | poster"
+               [alt]="actor.name"
+               class="rounded-circle imagen"
+               />
+          {{actor.name}}
+      </div>
+
+  </div>
+</div>
+
+
+

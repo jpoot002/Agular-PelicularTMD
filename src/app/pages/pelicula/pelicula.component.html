@@ -1,0 +1,71 @@
+<div class="movie-card">
+  <div class="container" [style.background-image]="PeliculaDescripcion.backdrop_path | posterbackdrop">
+
+    <div class="cover">
+      <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+            <img [src]="PeliculaDescripcion.poster_path | poster" class="d-block w-100 imgpersonal">
+      </div>
+    </div>
+
+    <div style="position:relative">
+      <div style="position:absolute; top:0; left:0;">
+      <img class="logrepro"  src="http://www.legacycitychurch.com/media/cover_art/Play%20Button%20Overlay/playbutton.png"
+      type="button" data-toggle="modal" data-target="#exampleModal"/>
+      </div>
+    </div>
+
+    <div class="hero text-center">
+      <div class="details">
+        <div class="title1 ">{{PeliculaDescripcion.title}}</div>
+        <div class="title2 ">{{PeliculaDescripcion.tagline}}</div>
+        <fieldset class="rating">
+          <star-rating [value]="PeliculaDescripcion.vote_average" totalstars="10" checkedcolor="red" uncheckedcolor="black" size="24px" readonly="false"></star-rating>
+        </fieldset>
+      </div>
+    </div>
+
+    <div class="description">
+      <div class="column2">
+        <p>{{PeliculaDescripcion.overview}}</p>
+        <div class="column1" *ngFor="let genres of PeliculaDescripcion.genres">
+          <span class="tag">{{genres.name}}</span>
+        </div>
+        <div class="column3">
+          <button type="button" class="btn btn-link"
+          (click)="Onregresar()">Regresar</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="caruselmultiples" style="margin-top: 270px;" *ngIf ='PeliculaCast.length > 0'>
+  <app-caruselmultiples [PeliculaCastSlideMultiples]="PeliculaCast"></app-caruselmultiples>
+</div>
+
+<div class="modal fade" id="exampleModal" tabindex="1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-body">
+       <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+
+          <div *ngIf="keyYutubepeliculas; else templateName">
+            <div class="embed-responsive embed-responsive-16by9" >
+              <app-youtubeplayer [keyYutubePlayer]="keyYutubepeliculas"></app-youtubeplayer>
+            </div>
+          </div>
+
+          <ng-template #templateName>
+              <img class="errorvideo"src="../../../assets/imagen/youtubeerrorcaida.jpg" alt="">
+          </ng-template>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+

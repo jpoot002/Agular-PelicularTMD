@@ -1,0 +1,13 @@
+
+<div class="row " >
+  <div class="col-md-3 " *ngFor="let itemMovieResulPeliculas of MovieResulPeliculas">
+        <img  class="img-fluid  img" [src]="itemMovieResulPeliculas.poster_path | poster "
+        (click)="OnMovieClick(itemMovieResulPeliculas)" type="button">
+    <h4>{{itemMovieResulPeliculas.title}}  </h4>
+    <li class="list-inline-item">
+      <star-rating [value]="itemMovieResulPeliculas.vote_average" totalstars="10" checkedcolor="red" uncheckedcolor="black" size="24px" readonly="false"></star-rating>
+    </li>
+  </div>
+</div>
+
+
