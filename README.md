@@ -11,10 +11,11 @@ Ejecute  `ng serve` para un servidor de desarrollo. Vaya a `http://localhost:420
 
 ## imágenes de vista previa de la pagina 
 --- Página principal 
-image.png
+![image](https://user-images.githubusercontent.com/68248332/169864027-59c8abdd-c4b7-47ef-a5a6-62f1c02b7306.png)
+
 
 --- Página al buscar una película por título
-image.png
+![image](https://user-images.githubusercontent.com/68248332/169863975-e4dee8be-ffbf-4ac0-a535-fc0b8b7b2db7.png)
 
 ### posdata
 El componente de caruselmultiples esta incompleto y tiene detalles
