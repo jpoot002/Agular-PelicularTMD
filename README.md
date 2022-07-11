@@ -17,5 +17,8 @@ Ejecute  `ng serve` para un servidor de desarrollo. Vaya a `http://localhost:420
 --- Página al buscar una película por título
 ![image](https://user-images.githubusercontent.com/68248332/169863975-e4dee8be-ffbf-4ac0-a535-fc0b8b7b2db7.png)
 
+--- Página de informacion del pelicula
+![image](https://user-images.githubusercontent.com/68248332/178327800-a46d8223-b0e2-4940-a73f-e22bf9c97c7f.png)
+
 ### posdata
-El componente de caruselmultiples esta incompleto y tiene detalles
+El componente de caruselmultiples con bootstrap tiene un detalle con la imagenes
